@@ -8,3 +8,9 @@ resource "azurerm_subnet" "subnet" {
     resource_group_name = "ramanrgnew"
     address_prefixes = ["10.0.0.0/24"]
 }
+resource "azurerm_subnet" "tsubnet" {
+    name = "tirjusubnet"
+    virtual_network_name = "birjvnet"
+    resource_group_name = "ramanrgnew"
+    address_prefixes = ["10.0.0.1/24"]
+}

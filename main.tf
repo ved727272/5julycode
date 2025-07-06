@@ -2,6 +2,13 @@ resource "azurerm_resource_group" "rg1" {
     name = "ramanrgnew"
     location = "eastus"
 }
+resource "azurerm_virtual_network" "birjuvnet" {
+    name = "vnet1"
+    resource_group_name = "ramanrgnew"
+    location = "eastus"
+    address_space =  = ["10.0.0.0/24"]
+}
+
 resource "azurerm_subnet" "subnet" {
     name = "birjusubnet"
     virtual_network_name = "birjvnet"
